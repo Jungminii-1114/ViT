@@ -8,6 +8,11 @@ This repository contains the overall proceduer of implementing Vision Transforme
 
 ## Datasets
 
+The dataset contains 30 different types of platns images, including 21000 training images, 3000 validation images and 6000 test images, with a total size of 1.48GB, and supports the recognition of the folloiwng plants types : aloevera, banana, bilimbi, cantalope, cassava, coconut, etc.
+
+
+
+Download Link : [Kaggle Plants Classification](https://www.kaggle.com/datasets/marquis03/plants-classification)
 
 ## Repository Structure
 
