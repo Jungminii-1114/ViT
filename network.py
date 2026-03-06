@@ -11,7 +11,7 @@ class PatchEmbedding(nn.Module):
         super().__init__()
         self.img_size = img_size
         self.patch_size = patch_size
-        self.um_patches = (self.img_size // self.patch_size) ** 2
+        self.num_patches = (self.img_size // self.patch_size) ** 2
 
         self.LinProjection = nn.Linear(
             in_channels * self.patch_size * self.patch_size, # P^2 x C
@@ -37,6 +37,9 @@ Conv2d is same with adapting a single Linear Layer to each patch.
 
 We can write it down like below.
 '''
+
+# def __init__(self, data_path, label_path, mode='train', transform=None):
+
 
 class PatchEmb_with_conv(nn.Module):
     def __init__(self, img_size=224, in_channels=3, patch_size=16, emb_size=768):
@@ -93,7 +96,6 @@ class Attention(nn.Module):
 class MLP(nn.Module):
     def __init__(self, emb_size):
         super().__init__()
-        # 이거 이름 바뀌어야 하지 않나?
         hidden_dim = emb_size * 4
 
         self.fc1 = nn.Linear(emb_size, hidden_dim)
@@ -168,8 +170,3 @@ class ViT(nn.Module):
         result = self.head(cls_token_final)
 
         return result
-
-
-
-
-        
