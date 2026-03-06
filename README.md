@@ -43,8 +43,8 @@ As we can see below, the original dataset from kaggle contains the same image on
 
 <img width="372" height="240" alt="image" src="https://github.com/user-attachments/assets/8fe836ed-3e12-4db8-9f29-8b8641d9022c" />
 
-## Visualization
-### Patch Embedding
+## Attention HeatMap
+
 
 ## Reference
 * Paper : *"An Image Worth 16x16 Words : Transformers for Image Recognition At Scale"*
